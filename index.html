@@ -9,6 +9,8 @@
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -16,68 +18,130 @@
 </head>
 <body>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+<header>
+<div class="container">
 
-  Dark Mode
+  <div class="text">
+    <h1>Social Media Dashboard</h1>
+    <h4>Total Followers: 23,004</h4>
+  </div>
+  <hr>
+  <span class="dark-mode-toggle">
+    Dark Mode
+    <input type="checkbox" class="toggle-button">
+  </span>
+</div>
+
+</header>
+
+<main>
+  <div class="container grid">
 
   
+    <div class="box facebook">
+      <div>
+        <img src="images/icon-facebook.svg">@nathanf
+      </div>
+      <h1>1987</h1>
+      <span class="followers">Followers</span>
+      <span class="today up"> 
+        12 Today
+      </span>
+    </div>
 
-  @nathanf
-  1987
-  Followers
-  12 Today
+    <div class="box twitter">
+      <div>
+        <img src="images/icon-twitter.svg">@nathanf
+      </div>
+      <h1>1044</h1>
+      <span class="followers">Followers</span>
+      <span class="today up"> 
+        99 Today
+      </span>
+    </div>
 
-  @nathanf
-  1044
-  Followers
-  99 Today
+    <div class="box instagram">
+      <div>
+        <img src="images/icon-instagram.svg">@nathanf
+      </div>
+      <h1>11k</h1>
+      <span class="followers">Followers</span>
+      <span class="today up"> 
+        12 Today
+      </span>
+    </div>
 
-  @realnathanf
-  11k
-  Followers
-  1099 Today
+    <div class="box youtube">
+      <div>
+        <img src="images/icon-youtube.svg">Nathan
+      </div>
+      <h1>8239</h1>
+      <span class="followers">Subscribers</span>
+      <span class="today down"> 
+        144 Today
+      </span>
+    </div>
+  
+    <h1 class="overview-h">Overview - Today</h1>
+    <div class="overview-box">
+      <span class="title">Page Views</span>
+      <img src="images/icon-facebook.svg" class="icon" alt="facebok logo">
+      <h3>87</h3>
+      <span class="percentage up">3%</span>
+    </div>
 
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+    <div class="overview-box">
+      <span class="title">Likes</span>
+      <img src="images/icon-facebook.svg" class="icon" alt="facebok logo">
+      <h3>52</h3>
+      <span class="percentage down">2%</span>
+    </div>
 
+    <div class="overview-box">
+      <span class="title">Likes</span>
+      <img src="images/icon-instagram.svg" class="icon" alt="instagram logo">
+      <h3>5462</h3>
+      <span class="percentage up">2257%</span>
+    </div>
 
+    <div class="overview-box">
+      <span class="title">Page Views</span>
+      <img src="images/icon-instagram.svg" class="icon" alt="instagram logo">
+      <h3>52k</h3>
+      <span class="percentage up">1375%</span>
+    </div>
 
-  Overview - Today
+    <div class="overview-box">
+      <span class="title">Retweets</span>
+      <img src="images/icon-twitter.svg" class="icon" alt="twitter logo">
+      <h3>117</h3>
+      <span class="percentage up">303%</span>
+    </div>
 
-  Page Views
-  87
-  3%
+    <div class="overview-box">
+      <span class="title">Likes</span>
+      <img src="images/icon-twitter.svg" class="icon" alt="twitter logo">
+      <h3>507</h3>
+      <span class="percentage up">553%</span>
+    </div>
 
-  Likes
-  52
-  2%
+    <div class="overview-box">
+      <span class="title">Likes</span>
+      <img src="images/icon-youtube.svg" class="icon" alt="youtube logo">
+      <h3>107</h3>
+      <span class="percentage down">19%</span>
+    </div>
 
-  Likes
-  5462
-  2257%
+    <div class="overview-box">
+      <span class="title">Total Views</span>
+      <img src="images/icon-youtube.svg" class="icon" alt="youtube logo">
+      <h3>1402</h3>
+      <span class="percentage down">12%</span>
+    </div>
+  
+  </div>
+</main>
 
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

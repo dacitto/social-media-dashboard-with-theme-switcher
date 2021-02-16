@@ -1,0 +1,341 @@
+/*## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+
+- Lime Green: hsl(163, 72%, 41%)
+- Bright Red: hsl(356, 69%, 56%)
+
+- Facebook: hsl(208, 92%, 53%)
+- Twitter: hsl(203, 89%, 53%)
+- Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
+- YouTube: hsl(348, 97%, 39%)
+
+#### Dark Theme
+
+- Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)
+
+#### Light Theme
+
+- Toggle: hsl(230, 22%, 74%)
+
+### Neutral
+
+#### Dark Theme
+
+- Very Dark Blue (BG): hsl(230, 17%, 14%)
+- Very Dark Blue (Top BG Pattern): hsl(232, 19%, 15%)
+- Dark Desaturated Blue (Card BG): hsl(228, 28%, 20%)
+- Desaturated Blue (Text): hsl(228, 34%, 66%)
+- White (Text): hsl(0, 0%, 100%)
+
+
+## Typography
+
+### Body Copy
+
+- Font size (Overview Card Headings): 14px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700
+#### Light Theme
+
+- White (BG): hsl(0, 0%, 100%)
+- Very Pale Blue (Top BG Pattern): hsl(225, 100%, 98%)
+- Light Grayish Blue (Card BG): hsl(227, 47%, 96%)
+- Dark Grayish Blue (Text): hsl(228, 12%, 44%)
+- Very Dark Blue (Text): hsl(230, 17%, 14%)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  background-color: #f5f7ff;
+  padding-bottom: 100px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+header .text {
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -ms-grid-column-align: left;
+      justify-self: left;
+  -ms-flex-line-pack: left;
+      align-content: left;
+  -ms-flex-item-align: left;
+      -ms-grid-row-align: left;
+      align-self: left;
+}
+
+header h1 {
+  line-height: 1;
+}
+
+header h4, header span {
+  color: #63687e;
+}
+
+header hr {
+  width: 100%;
+  border: 1px solid #63687e;
+  height: 0;
+  margin: 15px 0;
+}
+
+header .dark-mode-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 0.5;
+}
+
+.container {
+  padding: 0 5px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+main {
+  position: relative;
+  width: 100vw;
+  top: -100px;
+}
+
+main .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+}
+
+main .grid .box {
+  grid-column: 1/-1;
+  overflow: hidden;
+  border-radius: 6px;
+  color: #1e202a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f0f2fa;
+  padding: 3rem 0;
+  position: relative;
+  -o-border-image: linear-gradient #fdc468 to #df4996;
+     border-image: linear-gradient #fdc468 to #df4996;
+}
+
+main .grid .box:hover {
+  cursor: pointer;
+  background-color: #e1e3f0;
+  -webkit-transition: 0.1s all ease-in-out;
+  transition: 0.1s all ease-in-out;
+}
+
+main .grid .box::after {
+  top: 0px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+}
+
+main .grid .box.facebook::after {
+  background-color: #198ff5;
+}
+
+main .grid .box.twitter::after {
+  background-color: #1ca0f2;
+}
+
+main .grid .box.instagram::after {
+  background: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
+  background: linear-gradient(0.25turn, #fdc468 0%, #df4996 100%);
+}
+
+main .grid .box.youtube::after {
+  background-color: #c4032a;
+}
+
+main .grid .box div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3px;
+  color: #63687e;
+  font-weight: 500;
+}
+
+main .grid .box h1 {
+  font-size: 3rem;
+  margin: 0.3em;
+}
+
+main .grid .box .followers {
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  color: #63687e;
+}
+
+main .grid .box .today {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+main .grid .box .today.up {
+  color: #1db489;
+}
+
+main .grid .box .today.up::before {
+  display: inline-block;
+  content: "";
+  border-bottom: 0.4em solid #1db489;
+  width: 0;
+  height: 0;
+  border-left: 0.4em solid transparent;
+  border-right: 0.4em solid transparent;
+  border-top: none;
+}
+
+main .grid .box .today.down {
+  color: #dc414c;
+}
+
+main .grid .box .today.down::before {
+  display: inline-block;
+  content: "";
+  border-top: 0.4em solid #dc414c;
+  width: 0;
+  height: 0;
+  border-left: 0.4em solid transparent;
+  border-right: 0.4em solid transparent;
+  border-bottom: none;
+}
+
+main .overview-h {
+  grid-column: 1/-1;
+}
+
+main .overview-box {
+  grid-column: 1/-1;
+  background-color: #f0f2fa;
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #1e202a;
+  gap: 1em;
+  padding: 1.5em;
+  border-radius: 5px;
+}
+
+main .overview-box:hover {
+  cursor: pointer;
+  background-color: #e1e3f0;
+}
+
+main .overview-box .title {
+  color: #63687e;
+  font-weight: 500;
+}
+
+main .overview-box * {
+  margin: 0;
+}
+
+main .overview-box .percentage, main .overview-box .icon {
+  -ms-grid-column-align: right;
+      justify-self: right;
+}
+
+main .overview-box .percentage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+main .overview-box .percentage.up {
+  color: #1db489;
+}
+
+main .overview-box .percentage.up::before {
+  display: inline-block;
+  content: "";
+  border-bottom: 0.4em solid #1db489;
+  width: 0;
+  height: 0;
+  border-left: 0.4em solid transparent;
+  border-right: 0.4em solid transparent;
+  border-top: none;
+}
+
+main .overview-box .percentage.down {
+  color: #dc414c;
+}
+
+main .overview-box .percentage.down::before {
+  display: inline-block;
+  content: "";
+  border-top: 0.4em solid #dc414c;
+  width: 0;
+  height: 0;
+  border-left: 0.4em solid transparent;
+  border-right: 0.4em solid transparent;
+  border-bottom: none;
+}
+
+main .overview-box h3 {
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=style.css.map */
