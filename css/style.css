@@ -74,6 +74,7 @@ header {
   width: 100%;
   padding-top: 20px;
   margin-bottom: 20px;
+  border-radius: 0 0 30px 30px;
 }
 
 header h1 {
@@ -117,7 +118,7 @@ header .dark-mode-toggle #toggle-button {
           appearance: none;
   border-radius: 15px;
   overflow: hidden;
-  background-color: #cdd7ee;
+  background-color: #aeb2cb;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   display: flexbox;
@@ -170,7 +171,7 @@ header .container {
 .container {
   padding: 0;
   margin: 0 auto;
-  width: 90%;
+  width: 88%;
   max-width: 1500px;
 }
 
@@ -426,6 +427,13 @@ main .overview-box h3 {
 }
 
 @media (min-width: 1200px) {
+  header {
+    padding-bottom: 150px;
+  }
+  main {
+    position: relative;
+    top: -150px;
+  }
   main .grid {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);

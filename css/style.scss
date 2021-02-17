@@ -109,6 +109,7 @@ header{
     width: 100%;
     padding-top: 20px;
     margin-bottom: 20px;
+    border-radius: 0 0 30px 30px;
     .text{
         //align-items: left;
       //  justify-self: left;
@@ -144,7 +145,7 @@ header{
             //box-shadow: inset 0 0 5px #22222250;
             border-radius: 15px;
             overflow: hidden;
-            background-color: hsl(223, 50%, 87%);
+            background-color: #aeb2cb;
             transition: 0.5s ease-in-out;
             display: flexbox;
             align-items: center;
@@ -188,7 +189,7 @@ header{
 .container{
     padding: 0;
     margin: 0 auto;
-    width: 90%;
+    width: 88%;
     max-width: $container-max-with;
 
 }
@@ -391,8 +392,13 @@ main{
 }
 }
 @media (min-width:1200px) {
+    header{
+        padding-bottom: 150px;
+    }
     main{
-    
+            
+            position: relative;
+            top: -150px;
         .grid{
             grid-template-columns:repeat(4,1fr);
             
