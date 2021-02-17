@@ -118,17 +118,18 @@ header .dark-mode-toggle #toggle-button {
           appearance: none;
   border-radius: 15px;
   overflow: hidden;
-  background-color: #aeb2cb;
+  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background: linear-gradient(90deg, #378fe6 0%, #3eda82 100%);
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  display: flexbox;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   outline: none;
   cursor: pointer;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 
 header .dark-mode-toggle #toggle-button::after {
@@ -143,8 +144,8 @@ header .dark-mode-toggle #toggle-button::after {
 }
 
 header .dark-mode-toggle #toggle-button:checked {
-  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
-  background: linear-gradient(90deg, #378fe6 0%, #3eda82 100%);
+  background: none;
+  background-color: #aeb2cb;
 }
 
 header .dark-mode-toggle #toggle-button:checked::after {

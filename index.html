@@ -16,7 +16,7 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body id="dark">
+<body id="dark"  class="dark-mode">
 
 <header>
 <div class="container">
@@ -26,8 +26,8 @@
   </div>
   <hr>
   <span class="dark-mode-toggle">
-    Dark Mode
-      <input type="checkbox" id="toggle-button" onclick="toggleClass()" />
+    <lable for='toggle-button'>Dark Mode</lable>
+      <input type="checkbox" id="toggle-button" name="toggle-button" onclick="toggleClass()" />
     </span>
   </span>
 </div>
@@ -40,7 +40,7 @@
   
     <div class="box facebook">
       <div>
-        <img src="images/icon-facebook.svg">@nathanf
+        <img src="images/icon-facebook.svg" alt="facebook logo">@nathanf
       </div>
       <h1>1987</h1>
       <span class="followers">Followers</span>
@@ -51,7 +51,7 @@
 
     <div class="box twitter">
       <div>
-        <img src="images/icon-twitter.svg">@nathanf
+        <img src="images/icon-twitter.svg" alt="twitter logo">@nathanf
       </div>
       <h1>1044</h1>
       <span class="followers">Followers</span>
@@ -62,7 +62,7 @@
 
     <div class="box instagram">
       <div>
-        <img src="images/icon-instagram.svg">@nathanf
+        <img src="images/icon-instagram.svg"  alt="intagram logo">@nathanf
       </div>
       <h1>11k</h1>
       <span class="followers">Followers</span>
@@ -73,7 +73,7 @@
 
     <div class="box youtube">
       <div>
-        <img src="images/icon-youtube.svg">Nathan
+        <img src="images/icon-youtube.svg" alt="youtube logo">Nathan
       </div>
       <h1>8239</h1>
       <span class="followers">Subscribers</span>

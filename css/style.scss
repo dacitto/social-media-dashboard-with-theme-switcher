@@ -110,12 +110,6 @@ header{
     padding-top: 20px;
     margin-bottom: 20px;
     border-radius: 0 0 30px 30px;
-    .text{
-        //align-items: left;
-      //  justify-self: left;
-      //  align-content: left;
-      //  align-self: left;
-    }
     h1{
         line-height: 1;
     }
@@ -145,28 +139,27 @@ header{
             //box-shadow: inset 0 0 5px #22222250;
             border-radius: 15px;
             overflow: hidden;
-            background-color: #aeb2cb;
+            background: linear-gradient(90deg,hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100% );
             transition: 0.5s ease-in-out;
-            display: flexbox;
+            display: flex;
             align-items: center;
             outline: none;
-            cursor: pointer;
-            transform: rotate(180deg);
-    
-        &::after{
-            content: "";
-            height: 15px;
-            width: 15px;
-            border-radius: 100%;        
-            background-color: #fff;
-            position: absolute;
-            left: 2px;
-            right: auto;
-            //transition: 2s ease-in-out;
-        }
-        &:checked{
-            background: linear-gradient(90deg,hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100% );
+            cursor: pointer;            
             &::after{
+                content: "";
+                height: 15px;
+                width: 15px;
+                border-radius: 100%;        
+                background-color: #fff;
+                position: absolute;
+                left: 2px;
+                right: auto;
+                //transition: 2s ease-in-out;
+            }
+            &:checked{
+                background: none;
+                background-color: #aeb2cb;
+                &::after{
                 content: '';
                // transition: 2s ease-in-out;
                 position: absolute;
