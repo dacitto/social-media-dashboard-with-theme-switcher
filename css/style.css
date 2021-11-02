@@ -56,16 +56,21 @@ The designs were created to the following widths:
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 :root {
   --LimeGreen: $LimeGreen;
-  --BrightRed:$BrightRed;
-  --White:$White;
-  --Very-Pale-Blue:  $Very-Pale-Blue;
+  --BrightRed: $BrightRed;
+  --White: $White;
+  --Very-Pale-Blue: $Very-Pale-Blue;
   --Light-Grayish-Blue: $Light-Grayish-Blue;
   --Dark-Grayish-Blue: $Dark-Grayish-Blue;
   --Very-Dark-Blue: $Very-Dark-Blue;
 }
 
+* {
+  -webkit-transition: all 1000ms ease, color 1ms;
+  transition: all 1000ms ease, color 1ms;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 header {
@@ -81,7 +86,8 @@ header h1 {
   line-height: 1;
 }
 
-header h4, header span {
+header h4,
+header span {
   color: #63687e;
 }
 
@@ -120,8 +126,6 @@ header .dark-mode-toggle #toggle-button {
   overflow: hidden;
   background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
   background: linear-gradient(90deg, #378fe6 0%, #3eda82 100%);
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,9 +142,8 @@ header .dark-mode-toggle #toggle-button::after {
   width: 15px;
   border-radius: 100%;
   background-color: #fff;
-  position: absolute;
-  left: 2px;
-  right: auto;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 
 header .dark-mode-toggle #toggle-button:checked {
@@ -149,10 +152,11 @@ header .dark-mode-toggle #toggle-button:checked {
 }
 
 header .dark-mode-toggle #toggle-button:checked::after {
-  content: '';
-  position: absolute;
-  right: 2px;
-  left: auto;
+  content: "";
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  -webkit-transform: translateX(135%);
+          transform: translateX(135%);
 }
 
 header .container {
@@ -216,8 +220,6 @@ main .grid .box {
 main .grid .box:hover {
   cursor: pointer;
   background-color: #e1e3f0;
-  -webkit-transition: 0.1s all ease-in-out;
-  transition: 0.1s all ease-in-out;
 }
 
 main .grid .box::after {
@@ -344,7 +346,8 @@ main .overview-box * {
   margin: 0;
 }
 
-main .overview-box .percentage, main .overview-box .icon {
+main .overview-box .percentage,
+main .overview-box .icon {
   -ms-grid-column-align: right;
       justify-self: right;
 }
@@ -459,15 +462,22 @@ $Desaturated-Blue : hsl(228, 34%, 66%); //(Text)
   background-color: #1f212e;
 }
 
-.dark-mode .box, .dark-mode .overview-box {
+.dark-mode .box,
+.dark-mode .overview-box {
   background-color: #252a41 !important;
 }
 
-.dark-mode .box h1, .dark-mode .box h2, .dark-mode .box h3, .dark-mode .overview-box h1, .dark-mode .overview-box h2, .dark-mode .overview-box h3 {
+.dark-mode .box h1,
+.dark-mode .box h2,
+.dark-mode .box h3,
+.dark-mode .overview-box h1,
+.dark-mode .overview-box h2,
+.dark-mode .overview-box h3 {
   color: white;
 }
 
-.dark-mode .box:hover, .dark-mode .overview-box:hover {
+.dark-mode .box:hover,
+.dark-mode .overview-box:hover {
   background-color: #333a56 !important;
 }
 /*# sourceMappingURL=style.css.map */
